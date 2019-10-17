@@ -3,6 +3,10 @@ if exists("g:loaded_streamline_plugin")
 endif
 let g:loaded_streamline_plugin = 1
 
+if !exists("g:streamline_show_ale_status")
+		let	g:streamline_show_ale_status = 0
+endif
+
 function! StyleStatusline()
     let statusline=""
     let statusline.="%#Search#"
