@@ -66,7 +66,7 @@ hi WarningColor guibg=#DA711A guifg=#FFFFFF ctermbg=DarkBlue ctermfg=White
 hi ErrorColor guibg=#B63939 guifg=#FFFFFF ctermbg=Red ctermfg=White
 
 function! GitBranch()
-  return '▏'.system("git rev-parse --abbrev-ref HEAD 2>/dev/null | tr -d '\n'").' '
+  return '▏'.system("cd " . expand('%:p:h') . " && git rev-parse --abbrev-ref HEAD 2>/dev/null | tr -d '\n'").' '
 endfunction
 
 function! GetErrors()
