@@ -23,7 +23,7 @@ function! StyleStatusline()
     let statusline.="\ %{&fileencoding?&fileencoding:&encoding}"
     let statusline.="[\%{&fileformat}\] "
     let statusline.="%#TermCursor#"
-    let statusline.="▏☰ %l:%c"             " Show line number and column
+    let statusline.="▏ %l:%c"             " Show line number and column
     let statusline.=" %p%% "               " Show percentage
     if g:streamline_show_ale_status == 1
         let statusline.="%#WarningColor#"
@@ -45,7 +45,7 @@ function! StyleInactiveStatusline()
     let statusline.="▏%y"
     let statusline.="\ %{&fileencoding?&fileencoding:&encoding}"
     let statusline.="[\%{&fileformat}\] "
-    let statusline.="▏☰ %l:%c"
+    let statusline.="▏ %l:%c"
     let statusline.=" %p%% "
     if g:streamline_show_ale_status == 1
         let statusline.="%{GetWarnings()}"
